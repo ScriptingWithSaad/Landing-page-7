@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: #000;
+
+}
+
+/* main */
+
+#main {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* navbar */
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;
+    padding: 12vh 1.5vw;
+    text-transform: capitalize;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+}
+
+/* nav-part-1 */
+
+.nav-part-1 a {
+    font-size: 1.3vw;
+    padding-bottom: 3vh;
+    position: relative;
+    /* Ensure relative positioning for pseudo-element */
+}
+
+.nav-part-1 i {
+    padding-right: 1vw;
+}
+
+.nav-part-1 a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.nav-part-1 a:hover::after {
+    background-color: #ff0000;
+}
+
+/* nav-part-2 */
+
+.nav-part-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-part-2 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Center items vertically */
+    margin-right: 3vw;
+    font-weight: 500;
+    padding-bottom: 3vh;
+    position: relative;
+    /* Ensure relative positioning for pseudo-element */
+}
+
+.nav-part-2 a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for all links except the logo */
+.nav-part-2 a:not(:has(img)):hover::after {
+    background-color: #ff0000;
+}
+
+/* Ensure hover effect for the Coca-Cola logo */
+.nav-part-2 a img {
+    width: 12vw;
+    margin-right: -2vw;
+    filter: drop-shadow(2px 4px 6px black) brightness(1.2);
+}
+
+.nav-part-2 a:hover img {
+    filter: drop-shadow(2px 4px 6px black) brightness(1);
+}
+
+/* line */
+
+.line {
+    background-color: #Ef1727;
+    height: 0.6vh;
+    width: 5vw;
+    margin-right: 1.5vw;
+    border-radius: 1vw 0vw 0vw 1vw;
+}
+
+.line-2 {
+    border-radius: 0vw 1vw 1vw 0vw;
+}
+
+/* nav-part-3 */
+
+.nav-part-3 i {
+    font-size: 1.6vw;
+    position: relative;
+    padding-bottom: 3vh;
+    /* Add padding-bottom to reserve space */
+}
+
+.nav-part-3 i::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.nav-part-3 i:hover::after {
+    background-color: #ff0000;
+}
+
+/* containers */
+
+.containers {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* container 1 */
+
+.container-1 {
+    color: #fff;
+    height: calc(100vh - 24vh);
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0vw 2vw;
+}
+
+.container-1>p:first-child {
+    font-size: 4vw;
+    font-weight: 700;
+    padding-top: 2vh;
+}
+
+.container-1>p:first-child span {
+    font-weight: 500;
+    color: #ff0000;
+}
+
+.container-1>p:nth-child(2) {
+    padding: 5vh 0vw;
+}
+
+.container-1 button {
+    background-color: #eb2e2e;
+    border-radius: 3vw;
+    color: #fff;
+    padding: 2vh 3vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.container-1 button:hover {
+    background-color: #f81919;
+}
+
+.container-1 button i {
+    padding-right: 1vw;
+}
+
+.button i.ri-heart-line {
+    font-size: 1.6vw;
+    margin-left: 1vw;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+/* container 2 */
+
+.container-2 {
+    height: calc(100vh - 24vh);
+}
+
+.bg-image {
+    position: relative;
+    width: 20vw;
+    height: calc(100vh - 39vh);
+    margin-top: 5vh;
+    border-top-left-radius: 20vw;
+    border-top-right-radius: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/36b7aa22884283.5631b52971b00.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.2vw);
+    border-top-left-radius: 20vw;
+    border-top-right-radius: 20vw;
+    z-index: 1;
+}
+
+.bg-image img {
+    position: relative;
+    z-index: 2;
+    width: 11vw;
+    filter: drop-shadow(2px 4px 6px black) brightness(1.2);
+}
+
+/* container 3 */
+
+.container-3 {
+    color: #fff;
+    height: calc(100vh - 24vh);
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.container-3 p {
+    padding: 1.5vh 4vw;
+    margin-bottom: 1.5vh;
+}
+
+
+.elem-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.669);
+    width: 28vw;
+}
+
+.elem-1 i:hover {
+    cursor: pointer;
+}
+
+.elem-2 {
+    width: 28vw;
+
+}
+
+
+
+
+
+/* responsive */
+
+/* @media only screen and (max-width: 500px) {
+
+    .nav {
+        height: 80vh;
+        padding: 5vh 1.5vw;
+    }
+
+
+    .nav-part-2 {
+        flex-direction: column;
+
+    }
+} */
+
+
+
+/* responsive */
+@media only screen and (max-width: 500px) {
+
+    body {
+        width: 100%;
+    }
+
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        height: 75vh;
+        padding-top: 5vh;
+    }
+
+    .nav-part-1 a {
+        font-size: 6vw;
+        padding-bottom: 1.5vh;
+        margin-bottom: 2vh;
+    }
+
+    .nav-part-1,
+    .nav-part-2,
+    .nav-part-3 {
+        text-align: center;
+    }
+
+    .nav-part-2 {
+        flex-direction: column;
+    }
+
+    .nav-part-2 a {
+        font-size: 5.8vw;
+        margin-right: 0;
+        margin-bottom: 2.5vh;
+        padding-bottom: 1.2vh;
+    }
+
+    .nav-part-2 a img {
+        width: 35vw;
+
+    }
+
+
+    .nav-part-3 i {
+        font-size: 6.5vw;
+        margin: 0;
+
+    }
+
+    .nav-part-3 i:hover::after {
+        display: none;
+    }
+
+    .line,
+    .line-2 {
+        display: none;
+    }
+
+
+    /* container */
+
+
+    .containers {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .container-1 {
+        padding: 0vh 20vw;
+        width: 100%;
+        height: auto;
+    }
+
+    .container-1>p:first-child {
+        font-size: 12vw;
+        padding: 0;
+    }
+
+    .container-1 button {
+        padding: 1vh 5vw;
+        font-size: 6vw;
+        font-weight: normal;
+    }
+
+
+    .button i.ri-heart-line {
+        font-size: 6.6vw;
+    }
+
+    .bg-image {
+        width: 60vw;
+        margin-top: normal;
+    }
+
+    .bg-image::before {
+        border-top-left-radius: 40vw;
+        border-top-right-radius: 40vw;
+        filter: blur(0.3vw);
+    }
+
+    .bg-image img {
+        width: 30vw;
+    }
+
+
+    .container-3 {
+        width: 60vw;
+        height: 0;
+        justify-content: normal;
+    }
+
+    .elem-1 {
+        width: 60vw;
+    }
+
+    .elem-2 {
+        width: 60vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
